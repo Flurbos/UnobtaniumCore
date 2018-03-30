@@ -10,6 +10,11 @@
 static SeedSpec6 pnSeed6_main[] = {
 };
 
+//TODO: Add some seednodes... 
+//Doesn't appear uno is using for any sofar( main, test.. )
+static SeedSpec6 pnSeed6_seg[] = {
+};
+
 static SeedSpec6 pnSeed6_test[] = {
 };
 #endif // BITCOIN_CHAINPARAMSSEEDS_H
