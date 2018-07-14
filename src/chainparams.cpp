@@ -83,15 +83,15 @@ static const Checkpoints::CCheckpointData data = {
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
         boost::assign::map_list_of
-        ( 0, uint256S("0x000004c2fc5fffb810dccc197d603690099a68305232e552d96ccbe8e2c52b75"))
-        ( 10000, uint256S("0x0000000d0ad0fcd14d0642755a1ebdabc418dba2bbbb6c9d48f9f5304dd99dff"))
-        ( 25000, uint256S("0x00000008a54b0d3e8bcd84b131253009422104de8ecc16ac9fe53fa1a39c2fe4"))
+        ( 0, uint256S("0x000007b02afb00ae826d948d88f4973c00073425f965917f6298b6d280bde021"))
+        //( 10000, uint256S("0x0000000d0ad0fcd14d0642755a1ebdabc418dba2bbbb6c9d48f9f5304dd99dff"))
+        //( 25000, uint256S("0x00000008a54b0d3e8bcd84b131253009422104de8ecc16ac9fe53fa1a39c2fe4"))
         ;
 static const Checkpoints::CCheckpointData dataTestnet = {
         &mapCheckpointsTestnet,
-        1436994107,
-        25044,
-        2880
+        1531487000,  //1436994107,
+        0, //25044,
+        0  //2880
     };
 
 static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
@@ -202,46 +202,30 @@ public:
 		nTargetSpacing = 60; // 30 seconds
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-	/*	//New Testnet Genesis Info:
- 		python genesis.py -z "San Francisco plaza evacuated after suspicious package is found" -n 1148347767 -t 1531487000 -b 0x207fffff -v 100000000
 
-		//results:
-04ffff001d01043f53616e204672616e636973636f20706c617a612065766163756174656420616674657220737573706963696f7573207061636b61676520697320666f756e64
-		algorithm: SHA256
-		merkle hash: 36a192e90f70131a884fe541a1e8a5643a28ba4cb24cbb2924bd0ee483f7f484
-		pszTimestamp: San Francisco plaza evacuated after suspicious package is found
-		pubkey:
-04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f
-		time: 1531487000
-		bits: 0x207fffff
-		nonce: 1148347770
-		genesis hash: 716d3f92bbd3f186b348e440d6090f58708d5b6bc55e159c342f3d7b4d5662bb
-	*/
-
-
-	/* A Testnet on the original unobtanium difficulty: */
         /*
-	python genesis.py -z "San Francisco plaza evacuated after suspicious package is found" -t 1531487000 -b 0x1e0fffff -v 100000000
+	  python genesis.py -z "San Francisco plaza evacuated after suspicious package is found" -t 1531487000 -b 0x1e0fffff -v 100000000
+
 04ffff001d01043f53616e204672616e636973636f20706c617a612065766163756174656420616674657220737573706963696f7573207061636b61676520697320666f756e64
-algorithm: SHA256
-merkle hash: 36a192e90f70131a884fe541a1e8a5643a28ba4cb24cbb2924bd0ee483f7f484
-pszTimestamp: San Francisco plaza evacuated after suspicious package is found
-pubkey: 04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f
-time: 1531487000
-bits: 0x1e0fffff
-Searching for genesis hash..
-141232.0 hash/s, estimate: 8.4 h
-genesis hash found!
-nonce: 1746468
-genesis hash: 000007b02afb00ae826d948d88f4973c00073425f965917f6298b6d280bde021
+	  algorithm: SHA256
+	  merkle hash: 36a192e90f70131a884fe541a1e8a5643a28ba4cb24cbb2924bd0ee483f7f484
+	  pszTimestamp: San Francisco plaza evacuated after suspicious package is found
+	  pubkey: 04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f
+	  time: 1531487000
+	  bits: 0x1e0fffff
+	  Searching for genesis hash..
+	  141232.0 hash/s, estimate: 8.4 h
+	  genesis hash found!
+	  nonce: 1746468
+	  genesis hash: 0x000007b02afb00ae826d948d88f4973c00073425f965917f6298b6d280bde021
         */
 
         genesis.nTime = 1531487000;//13/07/2018
-        genesis.nNonce = 1148347767;
-        genesis.nBits = 0x207fffff;
+        genesis.nNonce = 1746468;
+        genesis.nBits = 0x1e0fffff;
 	//merkle hash: 36a192e90f70131a884fe541a1e8a5643a28ba4cb24cbb2924bd0ee483f7f484
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256S("0x716d3f92bbd3f186b348e440d6090f58708d5b6bc55e159c342f3d7b4d5662bb"));
+        assert(hashGenesisBlock == uint256S("0x000007b02afb00ae826d948d88f4973c00073425f965917f6298b6d280bde021"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
