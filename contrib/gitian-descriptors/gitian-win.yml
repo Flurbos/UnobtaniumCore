@@ -100,7 +100,12 @@ script: |
     make ${MAKEOPTS}
     make deploy
     make install-strip
-    cp -f unobtanium-*setup*.exe $OUTDIR/
+
+    #Temporary adjustment - Until the setup build compiles
+    #Comment out this area, to not halt build.
+    #cp -f unobtanium-*setup*.exe $OUTDIR/
+    #Uncomment above later
+
     cd installed
     mv ${DISTNAME}/bin/*.dll ${DISTNAME}/lib/
     find . -name "lib*.la" -delete
