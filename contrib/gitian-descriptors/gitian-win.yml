@@ -2,7 +2,7 @@
 name: "unobtanium-win-0.10.4"
 enable_cache: true
 suites:
-- "precise"
+- "trusty"
 architectures:
 - "amd64"
 packages: 
@@ -101,10 +101,12 @@ script: |
     make deploy
     make install-strip
 
-    #Temporary adjustment - Until the setup build compiles
-    #Comment out this area, to not halt build.
-    #cp -f unobtanium-*setup*.exe $OUTDIR/
-    #Uncomment above later
+    #Avoid an error this late in compiling..
+    if [ -f unobtanium-*setup*.exe ]; then
+    cp -f unobtanium-*setup*.exe $OUTDIR/
+    else
+    echo "ERROR: The file 'unobtanium-*setup*.exe' does not exist."
+    fi
 
     cd installed
     mv ${DISTNAME}/bin/*.dll ${DISTNAME}/lib/
