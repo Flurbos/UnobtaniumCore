@@ -23,10 +23,12 @@ Downloads:
 
 **Windows Binaries (32 & 64):**  
 _Installer Files:_  
-_TODO: Compile and add.._  
+[Unobtanium Win32-setup.exe](https://transfer.sh/jTXE9/unobtanium-0.10.4.1-win32-setup.exe) - _7e03748b7b19c82743dd692e6bdb0e7ee05c80e5abc06d1c090a91e93fa219cc_  
+[Unobtanium Win64-setup.exe](https://transfer.sh/k4axH/unobtanium-0.10.4.1-win64-setup.exe) - _6a2b118958bfd21482b09552aef18537d03d0c12990411b2bd2835ebc3dfeeeb_  
 
 _Portable Files ( No Installer ):_  
-_TODO: Compile and add.._  
+[Unobtanium Win32.zip](https://transfer.sh/RSrbv/unobtanium-0.10.4.1-win32.zip) - _bdcb927066a7b62f0dfd8e604915a743e076d28734d8470e1bac160d567e4c94_  
+[Unobtanium Win64.zip](https://transfer.sh/i1b55/unobtanium-0.10.4.1-win64.zip) - _6be61a43c39a646d615abffbc0939b56b6c45e10c7d7f9c7765ee21266d07586_  
 
 **OSX Binaries (32 & 64):**  
 _TODO: Currently build issues, looking into!_
