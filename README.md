@@ -13,7 +13,7 @@ out collectively by the network. Unobtanium is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Unobtanium software, see https://
+the Unobtanium software, see https://flurbo.xyz/Unobtanium/
 
 License
 -------
